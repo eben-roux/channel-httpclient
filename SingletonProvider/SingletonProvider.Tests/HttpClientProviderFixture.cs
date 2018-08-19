@@ -73,5 +73,35 @@ namespace SingletonProvider.Tests
             Assert.That(github, Is.SameAs(github2));
             Assert.That(google, Is.SameAs(google2));
         }
+
+        [Test]
+        public void Should_be_able_to_use_callback_to_register_client()
+        {
+            var provider = new HttpClientProvider();
+
+            provider.Add("my-name", () => new HttpClient());
+
+            var client = provider.Get("my-name");
+
+            Assert.That(client, Is.Not.Null);
+        }
+
+        [Test]
+        public void Should_be_able_to_use_callback_to_configure_client()
+        {
+            var provider = new HttpClientProvider();
+
+            var baseAddress = new Uri("https://my-api/");
+
+            provider.Add("my-name", httpClient =>
+            {
+                httpClient.BaseAddress = baseAddress;
+            });
+
+            var client = provider.Get("my-name");
+
+            Assert.That(client, Is.Not.Null);
+            Assert.That(client.BaseAddress, Is.SameAs(baseAddress));
+        }
     }
 }
