@@ -1,14 +1,3 @@
-Singleton with many options requires many singletons
-IDisposable on HttpClient not *really* an issue
+# Singleton Provider
 
-
-using (var response = await _httpClient.GetAsync(requestUri))
-{
-    response.EnsureSuccessStatusCode();
-    var result = await response.Content.ReadAsStringAsync();
-    return JsonConvert.DeserializeObject<t>(result);
-}
-
-
-https://stackoverflow.com/questions/37928543/httpclient-single-instance-with-different-authentication-headers
-
+The sample code for the [accompanying video]() that relates to [this StackOverflow question](https://stackoverflow.com/questions/51881555/stateless-services-vs-httpclient-wanting-to-be-a-singleton/51889539#51889539).
