@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonProvider", "SingletonProvider\SingletonProvider.csproj", "{C4AB3795-4667-4C5F-8968-32E09456CFE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonProvider", "SingletonProvider\SingletonProvider.csproj", "{C4AB3795-4667-4C5F-8968-32E09456CFE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonProvider.Tests", "SingletonProvider.Tests\SingletonProvider.Tests.csproj", "{3662C8AA-9B14-49E6-B26A-88C3135C39D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonProvider.Tests", "SingletonProvider.Tests\SingletonProvider.Tests.csproj", "{3662C8AA-9B14-49E6-B26A-88C3135C39D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0AC1C43D-EB81-46A6-8D78-4F284200E394}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
